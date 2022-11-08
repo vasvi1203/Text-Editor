@@ -35,6 +35,7 @@ const ToolbarData = [
                 "lg": [3, 0],
                 "xxl": [1, 0]
         },
+        "options": ["1", "2", "3", "4", "5", "6", "7"],
         "names": ["fontSize"]
     },
     {
@@ -48,7 +49,7 @@ const ToolbarData = [
             "xxl": [2, 0]
         },
         "icons": ["fa-solid fa-bold", "fa-solid fa-italic", "fa-solid fa-underline", "fa-solid fa-a border-bottom border-3", "fa-solid fa-highlighter border-bottom border-3"],
-        "names": ["bold", "italic", "underline", "text-color", "highlight-color"]
+        "names": ["bold", "italic", "underline", "text color", "highlight color"]
     },
     {
         "id": 5,
@@ -87,7 +88,7 @@ const ToolbarData = [
             "xxl": [2, 0]
         },
         "icons": ["fa-solid fa-link", "fa-regular fa-comment-dots", "fa-regular fa-image", "fa-solid fa-print", "fa-solid fa-spell-check"],
-        "names": ["link", "comment", "image", "print", "spell-check"]
+        "names": ["link", "comment", "image", "print", "spelling and grammar check"]
     },        
 ]
 

@@ -48,7 +48,9 @@ function DropdownList() {
             "content": [
                 {
                     "items": ["Text", "Paragraph styles", "Align & indent", "Line & paragraph spacing", "Columns", "Bullets & numbering", "Headers & footers", "Page orientation"],
-                    "icons": ["fa-solid fa-font", "fa-solid fa-paragraph", "fa-solid fa-indent", "fa-solid fa-arrow-down-wide-short", "fa-regular fa-file-lines", "fa-solid fa-list-ol", "fa-solid fa-pager","fa-solid fa-file-arrow-up"]
+                    "icons": ["fa-solid fa-font", "fa-solid fa-paragraph", "fa-solid fa-indent", "fa-solid fa-arrow-down-wide-short", "fa-regular fa-file-lines", "fa-solid fa-list-ol", "fa-solid fa-pager","fa-solid fa-file-arrow-up"],
+                    "subitems": ["Bold", "Italic", "Underline", "Superscript", "Subscript", "Strike Through"],
+                    "subicons": ["fa-solid fa-bold", "fa-solid fa-italic", "fa-solid fa-underline", "fa-solid fa-superscript", "fa-solid fa-subscript", "fa-solid fa-strikethrough"]
                 }
             ]
         },
