@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
-  isOpen: false,
+  isModalOpen: false,
   modalName: "text color"
 };
 
@@ -9,11 +9,11 @@ const modalSlice = createSlice({
   initialState,
   reducers: {
     openModal: (state, action) => {
-        state.isOpen = true;
+        state.isModalOpen = true;
         state.modalName = action.payload
     },
     closeModal: (state, action) => {
-        state.isOpen = false;
+        state.isModalOpen = false;
     }
   },
 });

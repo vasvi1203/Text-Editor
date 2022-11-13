@@ -16,15 +16,11 @@ export const ToolbarProvider = ({ children }) => {
         else if(style === "print")
             window.print()
         else if(style === "text color") {
-            console.log((color));
             document.execCommand("foreColor", false, color)
         }
         else if(style === "highlight color") {
             document.execCommand("hiliteColor", false, color)
         }     
-        else if(style === "link") {
-            document.execCommand("createLink", false, "https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand")
-        }       
         else
             document.execCommand(style)
     }
@@ -38,7 +34,6 @@ export const ToolbarProvider = ({ children }) => {
     }
 
     const fontSize = (size) => {
-        console.log(typeof(parseInt(size)));
         document.execCommand('fontSize', false, parseInt(size))
     }
 

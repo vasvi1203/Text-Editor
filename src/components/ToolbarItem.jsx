@@ -1,12 +1,13 @@
-import { useContext, useState } from 'react'
+import { useContext } from 'react'
 import { Button, Col, Form, OverlayTrigger, Tooltip, Modal } from 'react-bootstrap'
 import { useDispatch } from 'react-redux'
 import ToolbarContext from "../context/ToolbarContext"
+import { toggleEmoji } from '../features/emoji/emojiSlice'
 import { openModal } from '../features/modal/modalSlice'
 
 function ToolbarItem({ type, cols, icons, options, names }) {
     const dispatch = useDispatch();
-    const {execFunc, copyText, selectFont, fontSize} = useContext(ToolbarContext)
+    const {execFunc, selectFont, fontSize} = useContext(ToolbarContext)
     
     return (
         <Col xs={{span: cols.xs[0], offset: cols.xs[1]}} sm={{span: cols.sm[0], offset: cols.sm[1]}} md={{span: cols.md[0], offset: cols.md[1]}} lg={{span: cols.lg[0], offset: cols.lg[1]}} xxl={{span: cols.xxl[0], offset: cols.xxl[1]}}>
@@ -59,9 +60,14 @@ function ToolbarItem({ type, cols, icons, options, names }) {
                             {names[index].charAt(0).toUpperCase() + names[index].slice(1)}
                             </Tooltip>
                     }>
-                        <Button key={index} variant='dark' id={names[index]} onClick={
+                        <Button key={index} variant='dark' id={names[index]} onClick = {
                             names[index] === "text color" || names[index] === "highlight color" ? () => { dispatch(openModal(names[index])); } 
-                            : (e) => execFunc(e.target.id)}>
+                            : 
+                            (names[index] === "emoji" ? () => {
+                                dispatch(toggleEmoji())
+                            }
+                            :
+                            (e) => execFunc(e.target.id))}>
                             <i className={icon}></i>
                         </Button>
                     </OverlayTrigger>

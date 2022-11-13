@@ -87,8 +87,8 @@ const ToolbarData = [
             "lg": [3, 1],
             "xxl": [2, 0]
         },
-        "icons": ["fa-solid fa-link", "fa-regular fa-comment-dots", "fa-regular fa-image", "fa-solid fa-print", "fa-solid fa-spell-check"],
-        "names": ["link", "comment", "image", "print", "spelling and grammar check"]
+        "icons": ["fa-solid fa-icons", "fa-regular fa-comment-dots", "fa-regular fa-image", "fa-solid fa-print", "fa-solid fa-spell-check"],
+        "names": ["emoji", "comment", "image", "print", "spelling and grammar check"]
     },        
 ]
 

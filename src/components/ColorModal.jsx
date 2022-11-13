@@ -1,11 +1,11 @@
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import { Button, Modal } from 'react-bootstrap'
 import { ColorPicker, useColor } from "react-color-palette"
 import { useDispatch,useSelector } from 'react-redux';
 import ToolbarContext from "../context/ToolbarContext";
 import { closeModal } from "../features/modal/modalSlice";
 
-function ColorModal({ isOpen }) {
+function ColorModal({ isModalOpen }) {
     const dispatch = useDispatch();
     const [color, setColor] = useColor("hex", "#a30808");
     const { execFunc } = useContext(ToolbarContext);
@@ -13,9 +13,9 @@ function ColorModal({ isOpen }) {
 
     return (
         <>
-            <Modal show={isOpen} onHide={() => { dispatch(closeModal()); }}>
+            <Modal show={isModalOpen} onHide={() => { dispatch(closeModal()); }}>
                 <Modal.Header closeButton>
-                <Modal.Title>Modal heading</Modal.Title>
+                <Modal.Title>Select Color</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <ColorPicker width={456} height={228} color={color} onChange={setColor} hideHSV dark />
