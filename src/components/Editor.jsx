@@ -1,6 +1,6 @@
 function Editor() {
   return (
-    <div className="myEditor" id="myEditor" contentEditable="true" role="textbox" spellCheck="false">
+    <div id="myEditor" contentEditable="true" spellCheck="false">
       <i>
         lorem ipsum
         <b>helloooo</b>

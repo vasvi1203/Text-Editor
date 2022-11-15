@@ -21,6 +21,24 @@ export const ToolbarProvider = ({ children }) => {
         else if(style === "highlight color") {
             document.execCommand("hiliteColor", false, color)
         }     
+        else if(style === "image") {
+            document.execCommand('enableObjectResizing', false, true);
+            document.getElementById("imgupload").click()
+            document.getElementById("imgupload").addEventListener('change', function() {
+                var file = document.getElementById("imgupload").files[0];
+                console.log(file);
+                var reader  = new FileReader();
+            
+                reader.onloadend = function() {
+                    document.execCommand("insertImage", false, reader.result);
+                }
+            
+                if (file)
+                    reader.readAsDataURL(file);
+
+                console.log(reader.result);
+            });
+        }
         else
             document.execCommand(style)
     }

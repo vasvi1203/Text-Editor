@@ -3,6 +3,7 @@
     margin: 5vh 0 5vh 0;
     padding: 10vh;
     box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.2);
+    overflow: scroll;
 }
 
 [contenteditable] {

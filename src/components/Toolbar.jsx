@@ -8,6 +8,7 @@ function Toolbar() {
                 <Navbar.Toggle aria-controls="external-toggle"/>
                 <Navbar.Collapse id="external-toggle" className="bg-dark p-1 row gx-2">
                     <ToolbarList />
+                    <input type="file" id="imgupload" style={{display:"none"}}/> 
                 </Navbar.Collapse>
             </Container>
         </Navbar>
